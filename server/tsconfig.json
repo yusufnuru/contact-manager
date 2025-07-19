@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,                    
+    "strict": true,      
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,  
+    "outDir": "./dist",
+    "noImplicitAny": true, 
+    "sourceMap": true,
+    "types": ["node"],
+  },
+  "include": ["src/**/*", "test/**/*", "drizzle/**/*"], // which files to compile
+  "exclude": ["node_modules"], // which files to skip
+}
