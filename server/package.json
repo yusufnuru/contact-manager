@@ -9,7 +9,13 @@
     "dev": "tsx watch ./src/main.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "drizzle:dev:deploy": "NODE_OPTIONS='--import tsx' drizzle-kit push",
+    "drizzle:dev:migrate": "NODE_OPTIONS='--import tsx' drizzle-kit migrate",
+    "drizzle:dev:generate": "NODE_OPTIONS='--import tsx' drizzle-kit generate",
+    "db:dev:rm": "docker compose rm dev-db -s -f -v",
+    "db:dev:up": "docker compose up dev-db -d",
+    "db:dev:restart": "pnpm run db:dev:rm && npm run db:dev:up && sleep 2 && pnpm run drizzle:dev:migrate"
   },
   "keywords": [],
   "author": "",
