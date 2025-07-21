@@ -1,7 +1,7 @@
 // src/logger.ts
-import pino from 'pino'
+import pino from 'pino';
 
-const isDev = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV !== 'production';
 
 const logger = pino({
   transport: isDev
@@ -13,6 +13,6 @@ const logger = pino({
         },
       }
     : undefined,
-})
+});
 
-export default logger
+export default logger;
