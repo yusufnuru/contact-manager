@@ -12,6 +12,7 @@
     "sourceMap": true,
     "types": ["node"],
   },
-  "include": ["src/**/*", "test/**/*", "drizzle/**/*"], // which files to compile
+  "include": ["src/**/*", "test/**/*", "drizzle/**/*", 
+  ".prettieric"], // which files to compile
   "exclude": ["node_modules"], // which files to skip
 }
