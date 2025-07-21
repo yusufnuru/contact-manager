@@ -1,0 +1,16 @@
+export const enum AppErrorCode {
+  MissingCookies = 'MISSING_COOKIES',
+  InsufficientPermissions = 'INSUFFICIENT_PERMISSIONS',
+  MissingRefreshToken = 'MISSING_REFRESH_TOKEN',
+  MissingAccessToken = 'MISSING_ACCESS_TOKEN',
+  TokenExpired = 'TOKEN_EXPIRED',
+  ImageUploadError = 'LIMIT_UNEXPECTED_FILE',
+  InvalidAccessToken = 'INVALID_ACCESS_TOKEN',
+  EmailAlreadyExists = 'EMAIL_ALREADY_EXISTS',
+  WeakPassword = 'WEAK_PASSWORD',
+  RegistrationFailed = 'REGISTRATION_FAILED',
+  InvalidCredentials = 'INVALID_CREDENTIALS',
+  EmailNotVerified = 'EMAIL_NOT_VERIFIED',
+  LoginFailed = 'LOGIN_FAILED',
+  RefreshFailed = 'RefreshFailed',
+}
