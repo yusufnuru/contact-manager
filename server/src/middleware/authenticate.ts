@@ -24,9 +24,7 @@ export const authenticate = async (
     // If no access token, check if we have refresh token
     if (!accessToken) {
       if (!refreshToken) {
-        return res.status(UNAUTHORIZED).json({
-          message: 'Authentication required',
-        });
+        appAssert(false, UNAUTHORIZED, 'No access or refresh token provided');
       }
 
       // Try to refresh the session
