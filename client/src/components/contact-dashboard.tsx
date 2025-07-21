@@ -49,7 +49,7 @@ const ContactDashboard: React.FC = () => {
       alert(`Error creating contact: ${error.message}`)
       console.error('Error creating contact:', error)
       setShowAddModal(false)
-    }
+    },
   })
 
   const updateMutation = useMutation({

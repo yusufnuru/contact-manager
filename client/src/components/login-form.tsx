@@ -20,7 +20,8 @@ const LoginForm: React.FC = () => {
 
     try {
       await login(email, password)
-      navigate({ to: '/contact' }) // 👈 Redirect here
+      navigate({ to: '/contact' })
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(error.response?.data?.message || 'Login failed')
     } finally {

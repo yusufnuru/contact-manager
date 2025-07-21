@@ -3,10 +3,12 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 export const Route = createRootRoute({
   component: () => {
-    return (<>
-      <hr />
-      <Outlet />
-      <TanStackRouterDevtools />
-    </>)
+    return (
+      <>
+        <hr />
+        <Outlet />
+        <TanStackRouterDevtools />
+      </>
+    )
   },
 })

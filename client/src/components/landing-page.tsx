@@ -25,11 +25,11 @@ const LandingPage: React.FC = () => {
                 Sign In
               </Button>
             </Link>
-            <Link to="/signup" >
-            <Button variant="secondary" size="lg" className="gap-2">
-              <UserPlus className="w-5 h-5" />
-              Create Account
-            </Button>
+            <Link to="/signup">
+              <Button variant="secondary" size="lg" className="gap-2">
+                <UserPlus className="w-5 h-5" />
+                Create Account
+              </Button>
             </Link>
           </div>
 

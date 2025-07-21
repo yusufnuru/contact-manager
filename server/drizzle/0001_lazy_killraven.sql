@@ -1,0 +1,1 @@
+ALTER TABLE "contacts" ADD CONSTRAINT "contact_user_email_phone_unique_idx" UNIQUE("user_id","email","phone");

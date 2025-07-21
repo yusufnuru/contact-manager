@@ -1,12 +1,12 @@
 const Input: React.FC<{
-  label?: string;
-  type?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
-  required?: boolean;
-  error?: string;
-  icon?: React.ReactNode;
+  label?: string
+  type?: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  placeholder?: string
+  required?: boolean
+  error?: string
+  icon?: React.ReactNode
 }> = ({ label, type = 'text', value, onChange, placeholder, required, error, icon }) => {
   return (
     <div className="space-y-1">
@@ -32,7 +32,7 @@ const Input: React.FC<{
       </div>
       {error && <p className="text-sm text-red-600">{error}</p>}
     </div>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

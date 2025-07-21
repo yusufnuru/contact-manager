@@ -1,6 +1,8 @@
 import { createContext, useState, useEffect } from 'react'
 import api from '../utils/api'
 import type { User, AuthContextType, RegisterData } from '../types/index'
+
+
 const AuthContext = createContext<AuthContextType | null>(null)
 
 const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -17,14 +19,8 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     } catch (error) {
       // Clear user state when auth check fails
       setUser(null)
-      localStorage.removeItem('access_token')
-      localStorage.removeItem('refresh_token')
-      await cookieStore.get('access_token')
-      await cookieStore.delete('access_token')
-
-      cookieStore.delete('access_token')
-      cookieStore.delete('refresh_token')
       console.error('Failed to fetch user:', error)
+      logout()
     } finally {
       setIsLoading(false)
     }
@@ -46,13 +42,6 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
       console.error('Logout failed:', error)
     } finally {
       setUser(null)
-      localStorage.removeItem('access_token')
-      localStorage.removeItem('refresh_token')
-      await cookieStore.get('access_token')
-      await cookieStore.delete('access_token')
-
-      cookieStore.delete('access_token')
-      cookieStore.delete('refresh_token')
     }
   }
 

@@ -1,0 +1,26 @@
+### Register User - Valid
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "yusufnuru99@gmail.com",
+  "password": "Password123",
+  "confirmPassword": "Password123",
+  "firstName": "John",
+  "lastName": "Doe"
+}
+
+###
+
+### Register User - Invalid (Passwords don’t match)
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "yusufnuru99@gmail.com",
+  "password": "Password123"
+}
+
+### Refresh Token
+POST http://localhost:4000/api/auth/refresh
+Content-Type: application/json  

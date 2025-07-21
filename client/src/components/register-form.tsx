@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Button from './ui/button'
 import Input from './ui/input'
 import useAuth from '../hooks/useAuth'
-import { Link, Router } from '@tanstack/react-router'
+import { Link } from '@tanstack/react-router'
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -135,9 +135,9 @@ const RegisterForm = () => {
               {isLoading ? 'Creating Account...' : 'Create Account'}
             </Button>
             <Link to="/">
-            <Button type="button" variant="ghost">
-              Cancel
-            </Button>
+              <Button type="button" variant="ghost">
+                Cancel
+              </Button>
             </Link>
           </div>
         </form>
@@ -146,11 +146,7 @@ const RegisterForm = () => {
           <p className="text-gray-600">
             Already have an account?{' '}
             <Link to="/signin">
-            <button
-              className="text-blue-600 hover:text-blue-500 font-medium"
-            >
-              Sign In
-            </button>
+              <button className="text-blue-600 hover:text-blue-500 font-medium">Sign In</button>
             </Link>
           </p>
         </div>

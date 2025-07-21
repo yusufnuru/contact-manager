@@ -8,4 +8,4 @@ export const contactCategories = [
   { id: 'partner', label: 'Partner' },
   { id: 'lead', label: 'Lead' },
   { id: 'other', label: 'Other' },
-];
+]
