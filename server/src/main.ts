@@ -39,3 +39,5 @@ app.use(errorHandler);
 app.listen(Number(PORT), () => {
   console.log(`[server]: Server is running at http://localhost:${PORT} in ${NODE_ENV} environment`);
 });
+
+export default app;
